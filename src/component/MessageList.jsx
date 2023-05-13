@@ -16,7 +16,7 @@ useEffect(
             }
             let messageToDisplay=messageList;
             messageToDisplay=messageToDisplay.reverse();
-            messageToDisplay=messageToDisplay.slice(0,1)
+            messageToDisplay=messageToDisplay.slice(0,5)
             setMessages(messageToDisplay)
         })
     },[]
