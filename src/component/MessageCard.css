@@ -1,0 +1,17 @@
+.message-card{
+    padding:16px;
+    border-radius:8px;
+    margin-bottom:16px;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+.user-name{
+    font-size:14px;
+    font-weight:600;
+}
+.user-message{
+    font-size:12px;
+    font-weight:400;
+}
