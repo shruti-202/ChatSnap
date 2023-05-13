@@ -12,4 +12,4 @@ This is React project with Firebase integration! This application includes a mes
 
 
 ## App Link:
-https://messagehub.netlify.app
+https://messagehub.netlify.app/
