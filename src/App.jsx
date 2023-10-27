@@ -1,7 +1,7 @@
-import React from "react"
-import "./App.css"
-import Form from "./component/Form"
-import MessageList from "./component/MessageList"
+import React from "react";
+import "./App.css";
+import Form from "./component/Form";
+import MessageList from "./component/MessageList";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
         <div className="shape-2"></div>
         <Form />
       </div>
-      <MessageList/>
+      <MessageList />
     </div>
-  )
+  );
 }
-export default App
+export default App;
