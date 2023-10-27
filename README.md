@@ -1,4 +1,4 @@
-React_Messaging_App
+ChatSnap
 
 ## Tech Stack: 
 This is Personalized Messaging App.It's built with the help of HTML,CSS,React JS.
