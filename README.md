@@ -7,9 +7,9 @@
 - The most recent 5 messages are displayed on the UI. It’s dynamic and responsive.
 
 ## Tech Stack:
-- HTML
+- ReactJS
 - CSS
-- ReactJS.
+
 
 ## App Look:
 ![image](https://github.com/shruti-202/react_message_project/assets/110720732/dcdfc1d0-f837-42ba-a67c-b3b1a4f09fb9)
