@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
-
-const userNameFormat = /^[A-Z][a-zA-Z_]{0,29}$/;
+import { userNameFormat, userMessageFormat } from "../constants/Validators";
+import alerts from "../utility/Alerts";
 
 function Form() {
   const [name, setName] = useState("");
@@ -20,24 +20,37 @@ function Form() {
     const userName = name.trim();
     const userMessage = message.trim();
 
-    if (userName === "" || userMessage === "") {
-      alert("Please fill all the fields");
+    if (userName === "" || !userName) {
+      alerts("Please enter the User Name","error");
       return;
     }
-    if (!userNameFormat.test(userName)) {
-      alert(
-        "Invalid username! Username must start with a capital letter and contain only letters and underscores"
+    if (!userNameFormat(userName)) {
+      alerts(
+        "Invalid Username! Username must start with a capital letter followed by lowercase & an optional underscores & cannot contain gibberish",
+        "error"
       );
       return;
     }
     if (userName.length < 2 || userName.length > 30) {
-      alert(
-        "Name length should be greater than 1 and less than equals to 30 characters"
+      alerts(
+        "Name length should be greater than 1 and less than equals to 30 characters",
+        "error"
+      );
+      return;
+    }
+    if (!userName || userMessage === "") {
+      alerts("Please enter the Message", "error");
+      return;
+    }
+    if (!userMessageFormat(userMessage)) {
+      alerts(
+        "Invalid UserMessage Format: First word must start with an uppercase letter followed by either all uppercase/ lowercase letters or else message contains gibberish/ special characters",
+        "error"
       );
       return;
     }
     if (userMessage.length < 10) {
-      alert("The message must have a minimum of ten characters.");
+      alerts("The message must have a minimum of ten characters", "error");
       return;
     }
 
@@ -54,7 +67,7 @@ function Form() {
         }),
       }
     ).then(() => {
-      alert("Thanks! Your Message has been send to Shruti ");
+      alerts("Thanks! Your Message has been send to Shruti! ", "success");
       setName("");
       setMessage("");
     });
