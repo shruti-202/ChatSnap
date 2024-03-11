@@ -8,11 +8,11 @@ function Form() {
   const [message, setMessage] = useState("");
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setName(e.target.value.trim());
   };
 
   const handleMessageChange = (e) => {
-    setMessage(e.target.value);
+    setMessage(e.target.value.trim());
   };
 
   const handleSubmit = (e) => {
